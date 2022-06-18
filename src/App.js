@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+import Home from './components/home';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+import Navbar from './components/navbar';
+import Register from './components/register';
+import Login from './components/login';
+import './App.scss'
+
+const App = () => {
+ return (
+  <div className="container">
+    <Navbar />
+   <Routes>
+      <Route path='/register' element={<Register />}></Route>
+      <Route path='/login' element={<Login />}></Route>
+      <Route path='/home' element={<Home />}></Route>
+   </Routes>
+
+ </div>
+)
 }
-
 export default App;
+
+
+
+
+// import './App.css';
+// import Auth from './components/auth'
+// import Navbar from './components/navbar';
+// import { BrowserRouter ,Routes, Route, Link } from 'react-router-dom';
+// import ReactDOM from 'react-dom';
+// import Register from './components/register';
+
+// function App() {
+
+  
+  
+//   return (
+    
+//     <Navbar></Navbar>
+   
+//   );
+// }
+// // const root = ReactDOM.createRoot(document.getElementById('root'));
+// // root.render(<App />);
+// export default App;
