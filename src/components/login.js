@@ -1,16 +1,15 @@
 import React from "react";
-
 import { useForm } from "react-hook-form";
 import { registeredUsers } from "./register";
 import { useNavigate } from "react-router";
 
 const Login = () => {
-    const navigate = useNavigate()
+  const navigate = useNavigate()
 
   const { register , handleSubmit, formState: { errors }} = useForm();
+
   const onSubmit = (data) => {
     registeredUsers.forEach((user) => {
-      console.log('registeredUsers',registeredUsers)
         if (user.email === data.email && user.password === data.password) {
             navigate("/home");
         }

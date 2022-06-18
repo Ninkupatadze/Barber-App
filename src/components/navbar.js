@@ -4,8 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 function Navbar() {
 
-    const navigate = useNavigate()
-
+  const navigate = useNavigate()
 
   function handleClickOnRegister() {
     navigate("/register");
@@ -29,19 +28,6 @@ function Navbar() {
           </div>
         </div>
   );
-    
-    // return (
-    //     <>
-    //     <div className="nav">
-    //         <div className="nav-links">
-    //             <button>Barber</button>
-    //         </div>
-    //     </div>
-         
-    //     </>
-
-
-    // );
-  }
+}
  
-  export default Navbar;
+export default Navbar;

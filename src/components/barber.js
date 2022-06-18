@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import {
   useParams
 } from "react-router-dom";
+
 import { barbers } from "./register";
+import logo from "./logo.png"
 
 
 const Barber = (props) => {
@@ -31,33 +33,37 @@ const Barber = (props) => {
    
     return (
       <>
-      <div className="barber-info">
-        <h3>Barber Info</h3>
-        <p>name: {barber.firstName + ' ' + barber.lastName}</p>
-        <p>email: {barber.email}</p>
-        <p>adres: {barber.adress}</p>
-        <p>price:{barber.price}</p>
-        {barber.comments?.map((comm, index) => (
-          <p>{'coment' + index}:{comm}</p>
-        ))}
-      
-      <button type="button" onClick={handleClickOn}>{!commentArr.length ? 'add comment' : 'close'}</button>
-      {
-        commentArr.map((item, index) => (
-          <>
-            <input
-              type="text"
-              id="message"
-              name="message"
-              onChange={handleChange}
-              value={comment}>
-            </input>
+      <div className="barber-details">
+        <img src={logo} width="100" alt="barber-logo" ></img>
+        <div className="barber-info">
+          <h3>Barber Info:</h3>
+          <p>name: {barber.firstName + ' ' + barber.lastName}</p>
+          <p>email: {barber.mail}</p>
+          <p>adres: {barber.adress}</p>
+          <p>price:{barber.price}</p>
+          {barber.comments?.map((comm, index) => (
+            <p>{'coment ' + index + ': '}{comm}</p>
+          ))}
+        
+        <button type="button"  className={`${!commentArr.length ? "button-color-green" : "button-color-red"}`}
+                onClick={handleClickOn}>{!commentArr.length ? 'add comment' : 'close'}</button>
+        {
+          commentArr.map((item, index) => (
+            <>
+              <input
+                type="text"
+                id="message"
+                name="message"
+                onChange={handleChange}
+                value={comment}>
+              </input>
 
-            <button type="button" onClick={SaveComent}>
-              save</button>
-          </>    
-        ))
-      }      
+              <button type="button" onClick={SaveComent}>
+                save</button>
+            </>    
+          ))
+        }      
+        </div>
       </div>
     
     </>          

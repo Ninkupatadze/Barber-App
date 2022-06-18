@@ -3,9 +3,8 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+
 import Home from './components/home';
-
-
 import Navbar from './components/navbar';
 import Register from './components/register';
 import Login from './components/login';
@@ -27,27 +26,3 @@ const App = () => {
 )
 }
 export default App;
-
-
-
-
-// import './App.css';
-// import Auth from './components/auth'
-// import Navbar from './components/navbar';
-// import { BrowserRouter ,Routes, Route, Link } from 'react-router-dom';
-// import ReactDOM from 'react-dom';
-// import Register from './components/register';
-
-// function App() {
-
-  
-  
-//   return (
-    
-//     <Navbar></Navbar>
-   
-//   );
-// }
-// // const root = ReactDOM.createRoot(document.getElementById('root'));
-// // root.render(<App />);
-// export default App;

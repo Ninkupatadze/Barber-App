@@ -168,14 +168,35 @@ button:hover {
   cursor: pointer;
 }
 
-barber-info {
+.barber-details {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40%;
+  flex-direction: row;
 
-  h4 {
-    text-align: center;
+  img {
+    width: 300px;
+    margin-right: 40px;
   }
- 
+
+  .barber-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+  
+    h4 {
+      text-align: center;
+    }
+    .button-color-green {
+      background: #4a8f50;
+    }
+  
+    .button-color-red {
+      background: #93241a;
+    }
+   
+  }
 }
+
