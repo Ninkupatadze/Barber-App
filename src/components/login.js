@@ -10,6 +10,7 @@ const Login = () => {
   const { register , handleSubmit, formState: { errors }} = useForm();
   const onSubmit = (data) => {
     registeredUsers.forEach((user) => {
+      console.log('registeredUsers',registeredUsers)
         if (user.email === data.email && user.password === data.password) {
             navigate("/home");
         }

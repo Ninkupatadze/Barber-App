@@ -3,7 +3,24 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 export const registeredUsers = [{email: 'nino', password: 'nino123'}]
-export const barbers = [];
+export const barbers = [
+  {
+    id: 1,
+    firstName: 'ნინო', 
+    lastName: 'კუპატაძე', 
+    email: "nino77@gmail.com", 
+    adress: "რუსთავი", 
+    price: "100 ლარი"
+  },
+  {
+    id: 2,
+    firstName: 'ნიკა', 
+    lastName: 'სიმონიშვლი', 
+    email: "nino77@gmail.com", 
+    adress: "თბილისი", 
+    price: "200 ლარი"
+  }
+];
 
 const Register = () => {
   const [isBarberOrClient, setIsBarberOrClient] = useState('');
@@ -11,6 +28,7 @@ const Register = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmitBarber = (data) => {
+    data.id = barbers.length + 1;
     barbers.push(data);
   };
 

@@ -9,6 +9,7 @@ import Home from './components/home';
 import Navbar from './components/navbar';
 import Register from './components/register';
 import Login from './components/login';
+import Barber from './components/barber'
 import './App.scss'
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
       <Route path='/register' element={<Register />}></Route>
       <Route path='/login' element={<Login />}></Route>
       <Route path='/home' element={<Home />}></Route>
+      <Route path='/home/:id/' element={<Barber />}></Route>
    </Routes>
 
  </div>
